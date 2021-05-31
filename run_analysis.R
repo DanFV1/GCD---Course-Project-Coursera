@@ -60,11 +60,4 @@ names(TidyData)<-gsub("gravity", "Gravity", names(TidyData))
 FinalData <- TidyData %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
-write.table(FinalData, "FinalData.txt", row.name=FALSE)
-
-
-#Checking variable names
-str(FinalData)
-
-#Take a look at final data
-FinalData
+write.table(FinalData, "DataFinalGCDAssignment.txt", row.name=FALSE)
